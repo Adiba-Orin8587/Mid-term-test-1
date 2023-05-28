@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/style.css">
+        <title>Shopping cart</title>
+    </head>
+
+    <style>
+        body {
+            background-image: url(images/back.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-blend-mode: multiply;
+
+        }
+
+
+        .text-blue {
+            color: rgb(57, 38, 101);
+            font-size: 28px;
+        }
+
+        .text-secondari {
+            color: rgba(9, 9, 9, 0.721);
+
+        }
+
+        .text-second {
+            color: rgba(9, 9, 9, 0.584);
+
+        }
+
+        .text-white {
+            color: white;
+            font-size: 17px;
+            font-weight: 200;
+        }
+
+        .text-red {
+            color: rgb(176, 41, 41);
+            font-size: 20px;
+            font-weight: 500;
+
+        }
+
+        .text {
+            color: white;
+            ;
+        }
+
+        .bg-tran {
+            background-color: transparent;
+        }
+
+        .bg-whit {
+            background-color: rgb(208, 232, 240);
+        }
+
+        .bg-red {
+            background-color: rgb(179, 40, 40);
+            color: rgb(255, 255, 255);
+        }
+
+        .bg-g {
+            background-color: rgba(52, 52, 112, 0.47);
+            color: azure;
+        }
+
+        .bg {
+            background: #654ea3;
+            background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+            background: linear-gradient(to right, #eaafc8, #654ea3);
+            color: azure;
+            border-radius: 20px;
+        }
+
+        .bg-gr {
+            background-color: rgba(176, 176, 180, 0.822);
+        }
+
+        .nav-item :hover {
+            background-color: rgba(52, 52, 112, 0.47);
+            color: azure;
+            border: 0;
+            border-radius: 100px;
+            letter-spacing: 2px;
+            overflow: hidden;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .btn-outline-success:hover {
+            background-color: rgba(52, 52, 112, 0.657);
+            color: azure;
+            border: 0;
+        }
+
+        .s {
+            height: auto;
+            width: 43%;
+        }
+
+        .removeIcon {
+            top: -81px;
+            width: 8%;
+            position: relative;
+            right: -106%;
+        }
+    </style>
+
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-g px-5">
+                <div class="container-fluid">
+                    <a class="navbar-brand fw-bold fs-8 text-blue" href="#"><i>Dressy</i></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-md-5 ps-md-5">
+                            <li class="nav-item px-md-2">
+                                <a class="nav-link active text-white" aria-current="page" href="#">Everything</a>
+                            </li>
+                            <li class="nav-item px-md-2">
+                                <a class="nav-link text-white" href="#">Women</a>
+                            </li>
+                            <li class="nav-item px-md-2">
+                                <a class="nav-link text-white " href="#">Men</a>
+                            </li>
+                            <li class="nav-item px-md-2">
+                                <a class="nav-link text-white" href="#">About</a>
+                            </li>
+
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success border-0 bg-g text-white  "
+                                type="submit">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <section>
+            <div class="container py-5">
+                <h2 class="py-3 text-center">My shopping Cart</h2>
+                <div class="cart">
+                    <div class="col-md-12 col-lg-10 mx-auto">
+                        <div class="rounded div-1 "
+                            style="background-color: rgb(250, 250, 250);padding: 15%;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                            <div class="cart-item ">
+                                <div class="row justify-content-around">
+                                    <div class="col-md-7 center-item">
+                                        <img src="images/p-5.webp" class="img-fluid s" alt="">
+                                        <h5>Stylish Footwear</h5>
+                                    </div>
+
+                                    <div class="col-md-5 center-item">
+                                        <div class="inputGroup number">
+                                            <div class="d-flex mt-md-5 pt-md-5 py-3">
+                                                <button id="glass-minus" class="btn button"><i
+                                                        class="fas fa-minus"></i></button>
+                                                <input id="glass-number" type="number" min="0"
+                                                    class="form-control text-center" value="1">
+                                                <button id="glass-plus" class="btn btn-default"><i
+                                                        class="fas fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                        <h5 class="ps-5">$<span id="glass-total">1219</span> </h5>
+                                        <!-- <img src="images/1828843.png" alt="" class="removeIcon"> -->
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="cart-item">
+                                <div class="row">
+                                    <div class="col-md-7 center-item mx-auto">
+                                        <img class="img-fluid s" src="images/p-7.webp" alt="">
+                                        <h5>Latest Footwear</h5>
+                                    </div>
+                                    <div class="col-md-5 center-item">
+                                        <div class="inputGroup number">
+                                            <div class="d-flex mt-md-5 pt-md-5 py-3">
+                                                <button id="glass1-minus" class="btn button"><i
+                                                        class="fas fa-minus"></i></button>
+                                                <input id="glass1-number" type="number" min="0"
+                                                    class="form-control text-center" value="1">
+                                                <button id="glass1-plus" class="btn btn-default"><i
+                                                        class="fas fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                        <h5 class="ps-5">$<span id="glass1-total">1299</span> </h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cart-item">
+                                <div class="row">
+                                    <div class="col-md-7 center-item mx-auto">
+                                        <img class="img-fluid s" src="images/p-6.jpg" alt="">
+                                        <h5>Trendy Footwear</h5>
+                                    </div>
+                                    <div class="col-md-5 center-item">
+                                        <div class="inputGroup number">
+                                            <div class="d-flex mt-md-5 pt-md-5 py-3">
+                                                <button id="glass2-minus" class="btn button"><i
+                                                        class="fas fa-minus"></i></button>
+                                                <input id="glass2-number" type="number" min="0"
+                                                    class="form-control text-center" value="1">
+                                                <button id="glass2-plus" class="btn btn-default"><i
+                                                        class="fas fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                        <h5 class="ps-5">$<span id="glass2-total">1100</span> </h5>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 pt-5 rounded div-1"
+                            style="background-color: rgb(250, 250, 250);padding-left: 10%;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;">
+                            <div class="cart-item pt-5">
+                                <div class="row g-5">
+
+
+                                    <div class="col-md-3 m-2 bg py-2 px-3 ">
+                                        <h5>Subtotal: </h5>
+                                        <h5>$<span id="sub-total">1278</span> </h5>
+
+                                    </div>
+
+                                    <div class="col-md-3 m-2 bg py-2 px-3  ">
+                                        <h5>Tax: <br> <small>(15% rate)</small></h5>
+                                        <h5>$<span id="tax">1278</span> </h5>
+
+                                    </div>
+
+                                    <div class="col-md-3 m-2 bg py-2 px-3 ">
+                                        <h5>Total:</h5>
+                                        <h5>$<span id="total">1278</span></h5>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 pt-4 pb-4">
+                                <button type="button" class="btn bg-g border-0 orderNow btn-primary"
+                                    data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    Order now
+                                </button>
+                                <div class="modal fade " id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div style="color: rgb(28, 115, 44);" class="modal-body fs-4 text-center">
+                                                You order received successfully.
+                                                <h4 class="text-red">Thank you for staying with us.</h4>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary bg-red"
+                                                    data-bs-dismiss="modal">Close</button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="cart.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+    </html>
+</body>
+
+</html>

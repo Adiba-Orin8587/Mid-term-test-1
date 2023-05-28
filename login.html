@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" rel="stylesheet" />
+    <title>login</title>
+</head>
+<style>
+    body {
+        background-image: url(images/back.jpg);
+    }
+
+    .text {
+        color: rgb(253, 253, 253);
+    }
+
+    .nav-item :hover {
+        background-color: rgba(52, 52, 112, 0.47);
+        color: azure;
+        border: 0;
+        border-radius: 100px;
+        letter-spacing: 2px;
+        overflow: hidden;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .btn-outline-success:hover {
+        background-color: rgba(52, 52, 112, 0.657);
+        color: azure;
+        border: 0;
+    }
+
+    .text-blue {
+        color: rgb(57, 38, 101);
+        font-size: 28px;
+    }
+</style>
+
+
+<body>
+    <header>
+        <nav style="background-color: #4c2477a6;" class="navbar navbar-expand-lg bg-tran px-5">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold fs-8 text-blue" href="#"><i>Dressy</i></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-md-5 ps-md-5">
+                        <li class="nav-item px-md-2">
+                            <a class="nav-link active text-white" aria-current="page" href="#">Everything</a>
+                        </li>
+                        <li class="nav-item px-md-2">
+                            <a class="nav-link text-white" href="#">Women</a>
+                        </li>
+                        <li class="nav-item px-md-2">
+                            <a class="nav-link text-white " href="#">Men</a>
+                        </li>
+                        <li class="nav-item px-md-2">
+                            <a class="nav-link text-white" href="#">About</a>
+                        </li>
+
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success border-0 bg-g text-white  " type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class=" mt-5 pt-5 pb-5">
+        <div class="container-fluid h-custom">
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-md-9 col-lg-6 col-xl-5">
+                    <img style="border: 0px;border-radius: 300px;" src="images/shop.jpg" class="img-fluid"
+                        alt="Sample image">
+
+                </div>
+                <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                    <div style="box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;" class="p-5">
+                        <form>
+                            <div
+                                class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                                <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                                <button style="background: #c4a8d8;  
+                        background: -webkit-linear-gradient(to right,#b89acf, #8c54c7); 
+                        background: linear-gradient(to right, #b89acf, #8c54c7); 
+                        " type="button" class="btn border-0 btn-primary btn-floating mx-1">
+                                    <i class="fab fa-facebook-f"></i>
+                                </button>
+
+                                <button style="background: #c4a8d8;  
+                        background: -webkit-linear-gradient(to right,#b89acf, #8c54c7); 
+                        background: linear-gradient(to right, #b89acf, #8c54c7); 
+                        " type="button" class="btn border-0 btn-primary btn-floating mx-1">
+                                    <i class="fab fa-twitter"></i>
+                                </button>
+
+                                <button style="background: #c4a8d8;  
+                        background: -webkit-linear-gradient(to right,#b89acf, #8c54c7); 
+                        background: linear-gradient(to right, #b89acf, #8c54c7); 
+                        " type="button" class="btn border-0 btn-primary btn-floating mx-1">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </button>
+                            </div>
+
+                            <div class="divider d-flex align-items-center my-4">
+                                <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                            </div>
+
+
+                            <div class="form-outline mb-4">
+                                <label class="form-label fs-5 fw-semibold " for="form3Example3">Email address</label>
+                                <input type="email" id="user-email" class="form-control form-control-lg"
+                                    placeholder="Enter a valid email address" />
+
+                            </div>
+
+
+                            <div class="form-outline mb-3">
+                                <label class="form-label fs-5 fw-semibold " for="form3Example4">Password</label>
+                                <input type="password" required id="user-password" class="form-control form-control-lg"
+                                    placeholder="Enter password" />
+
+                            </div>
+                            <div class="form-outline mb-3">
+                                <label class="form-label fs-5 fw-semibold " for="form3Example4">Confirm
+                                    password</label>
+                                <input type="password" required id="user-confirmPassword"
+                                    class="form-control form-control-lg" placeholder="Confirm password" />
+
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+
+                                <div class="form-check mb-0">
+                                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                                    <label class="form-check-label fw-semibold" for="form2Example3">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#!" class="text-body fw-semibold">Forgot password?</a>
+                            </div>
+
+                            <div class="text-center text-lg-start mt-4 pt-2">
+                                <button id="login-button" type="button" class="btn btn-primary btn-lg border-0"
+                                    style="padding-left: 2.5rem; padding-right: 2.5rem;background-color: rgba(112, 70, 130, 0.719);">Login</button>
+                                <p class="small fw-bold mt-2 pt-1 mb-0">Don't have an account? <a href="#!"
+                                        class="link-danger">Register</a></p>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+
+    <footer style="background-color: #66407fd1">
+        <div style="overflow: hidden;margin-top: 10%;">
+            <div class="text-center text-lg-start text-white">
+                <div class="container">
+                    <div class="p-4 pb-0">
+                        <section class="">
+                            <div class="row">
+                                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                                    <h6 class="text-uppercase mb-4 font-weight-bold">
+                                        <a style="color: rgb(40, 27, 58);" class="navbar-brand fw-bold fs-8 text-blue"
+                                            href="#"><i>Dressy</i></a>
+                                    </h6>
+                                    <p>
+                                        Here you can use rows and columns to organize your footer
+                                        content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                                        elit.
+                                    </p>
+                                </div>
+                                <hr class="w-100 clearfix d-md-none" />
+
+
+                                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                                    <h6 class="text-uppercase mb-4 font-weight-bold ">Products</h6>
+                                    <p>
+                                        <a class="text text-decoration-none">Dress</a>
+                                    </p>
+                                    <p>
+                                        <a class="text text-decoration-none">Jacket</a>
+                                    </p>
+                                    <p>
+                                        <a class="text text-decoration-none">Eyewear</a>
+                                    </p>
+                                    <p>
+                                        <a class="text text-decoration-none">Shoes</a>
+                                    </p>
+                                </div>
+
+
+                                <hr class="w-100 clearfix d-md-none" />
+
+                                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                                    <h6 class="text-uppercase mb-4 font-weight-bold ">
+                                        Useful links
+                                    </h6>
+                                    <p>
+                                        <a class="text text-decoration-none">Your Account</a>
+                                    </p>
+                                    <p>
+                                        <a class="text text-decoration-none">About us</a>
+                                    </p>
+                                    <p>
+                                        <a class="text text-decoration-none">Shipping Rates</a>
+                                    </p>
+                                    <p>
+                                        <a class="text text-decoration-none">Help</a>
+                                    </p>
+                                </div>
+
+
+                                <hr class="w-100 clearfix d-md-none" />
+
+
+                                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                                    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                                    <p><i class="fas fa-home mr-3"></i> Dhaka , Bangladesh</p>
+                                    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+                                    <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+                                    <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+                                </div>
+
+                            </div>
+
+                        </section>
+
+
+                        <hr class="my-3">
+
+                        <section class="p-3 pt-0">
+                            <div class="row d-flex align-items-center">
+
+                                <div class="col-md-7 col-lg-8 text-center text-md-start">
+                                    <div class="p-3">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                                    <a class="btn btn-outline-light btn-floating m-1" class="text-white"
+                                        role="button"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-light btn-floating m-1" class="text-white"
+                                        role="button"><i class="fab fa-twitter"></i></a>
+                                    <a class="btn btn-outline-light btn-floating m-1" class="text-white"
+                                        role="button"><i class="fab fa-google"></i></a>
+                                    <a class="btn btn-outline-light btn-floating m-1" class="text-white"
+                                        role="button"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>
